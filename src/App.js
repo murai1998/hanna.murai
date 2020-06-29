@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+//import axios from 'axios';
+import React, { Component } from 'react';
+import Time from './Time'
+import Delete from './Delete'
+
+
+
+class App extends Component {
+ render() {
+    return (
+      <div className="container">
+      <h1>How to Help Local Animal Shelters</h1>
+      
+      <ol>
+          <li>Donate pet items</li>
+          <li>Provide a temporary home</li>
+          <li>Get active or help socialize</li>
+          <li>Put your talents to good use</li>
+      </ol>
+      
+         <Time/>
+         <Delete/>
+      </div>
+    );
+  }
 }
 
 export default App;
